@@ -18,8 +18,8 @@ server.get('/', function(request, response) {
 })
 
 server.get('/:id', function(request, response){
-    const id = request.param.id;
-    const result = contatos.filter(contato => contato.id == id);
+    const id = request.params.id;
+    const result = contatos.filter(contato => contato.id);
     response.json(result);
 })
 
