@@ -20,7 +20,7 @@ server.get('/', function(request, response) {
 server.get('/:id', function(request, response){
     const id = request.param.id;
     const result = contatos.filter(contato => contato.id == id);
-    response.json(id);
+    response.json(result);
 })
 
 server.post('/', function(request, response)
