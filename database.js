@@ -42,7 +42,7 @@ module.exports = {
     },
 
     async read(){
-        const sql = `Select * from contator order by nome`;
+        const sql = `Select * from contatos order by nome`;
         const result = await pool.query(sql); 
         return result.rows;
     },
