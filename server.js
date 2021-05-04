@@ -1,12 +1,15 @@
 const express = require('express');
 const{ uuid } = require('uuidv4');
+const cors = require('cors');
 
 const server = express();
 
 const database = require('./database');
 
 //middleware
+server.use(cors())
 server.use(express.json())
+
 
 contatos = []
 
