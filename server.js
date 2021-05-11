@@ -44,7 +44,7 @@ server.post('/', async function(request, response)
 
     // contatos.push(contato);
 
-    response.status(201).send();
+    response.status(200).json({id: result, nome, telefone});
 })
 
 server.put('/:id', async function (request, response){

@@ -33,7 +33,7 @@ module.exports = {
         {
             const sql = `Insert into contatos (nome, telefone) values ($1, $2)`;
             const result = await pool.query(sql, [nome, telefone]);
-            return result.rows;
+            return result.rows[0].id;
         }catch(error){
             console.log(error);
             return -1;
