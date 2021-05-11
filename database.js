@@ -60,7 +60,7 @@ module.exports = {
         return result.rows
     },
 
-    async dalete(id)
+    async delete(id)
     {
         const sql = `Delete from contatos Where  ID = $1`;
         const result = await pool.query(sql, [id]);
